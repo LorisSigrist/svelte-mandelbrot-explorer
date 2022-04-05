@@ -92,6 +92,6 @@ The component defaults to a canvas size of 300x150. This is the default size of 
 
 ## Limitations & Considerations
 
-Because this is a WebGl based implementation, the precision is limited. The Image breaks down after about a 100'000x zoom.
+Because this is a WebGl based implementation, the precision is limited. The Image breaks down after about a 50'000x zoom.
 
 The Canvas is only rerendered if one of the attributes changes. If you never change the attributes, it will basically be an image.
