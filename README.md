@@ -2,6 +2,8 @@
 
 ![Mandelbrot Explorer preview image](/preview-image.png)
 
+Try the demo [here](https://www.sigrist/blog/svelte-webgl-mandelbrot)
+
 ## Installation & Usage
 
 Install this component into your svelte or sveltekit application running `npm i svelte-mandelbrot-explorer`. You can then use it like this:
