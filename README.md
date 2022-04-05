@@ -3,6 +3,7 @@
 ![Mandelbrot Explorer preview image](/preview-image.png)
 
 ## Installation & Usage
+
 Install this component into your svelte or sveltekit application running `npm i svelte-mandelbrot-explorer`. You can then use it like this:
 
 ```jsx
@@ -15,15 +16,14 @@ Install this component into your svelte or sveltekit application running `npm i 
 
 The component defaults to a canvas size of 300x150. This is the default size of the `<canvas>` element. You should probably bind the width and height to that of a wrapper `<div>`. Like so:
 
-
 ```jsx
 <script>
-    import MandelbrotExplorer from 'svelte-mandelbrot-explorer
+    import MandelbrotExplorer from 'svelte-mandelbrot-explorer'
     let width = 150;
     let height= 300;
 </script>
 
-<div bind:clientWidth={width} bind:clientHeight={height} id="mandelbrot-explorer-wrapper">  
+<div bind:clientWidth={width} bind:clientHeight={height} id="mandelbrot-explorer-wrapper">
     <MandelbrotExplorer {width} {height}/>
 </div>
 
@@ -36,7 +36,6 @@ The component defaults to a canvas size of 300x150. This is the default size of 
 ```
 
 ## API Reference
-
 
 - **width & height**
 
@@ -97,13 +96,14 @@ The component defaults to a canvas size of 300x150. This is the default size of 
 
     Type: number,
 
-    
+
     Default: 0.5,
 
 
-    How zoomed in the viewport should be. The viewport-width in the complex plane is equal to `1/zoom`. 
+    How zoomed in the viewport should be. The viewport-width in the complex plane is equal to `1/zoom`.
 
 ## Limitations & Considerations
-Because this is a WebGl based implementation, the precision is limited. The Image breaks down after about a 100'000x zoom. 
 
-The Canvas is only rerendered if one of the attributes changes. If you never change the attributes, it will basically be an image. 
+Because this is a WebGl based implementation, the precision is limited. The Image breaks down after about a 100'000x zoom.
+
+The Canvas is only rerendered if one of the attributes changes. If you never change the attributes, it will basically be an image.
