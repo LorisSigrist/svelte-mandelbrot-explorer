@@ -18,21 +18,17 @@ The component defaults to a canvas size of 300x150. This is the default size of 
 
 ```jsx
 <script>
-    import MandelbrotExplorer from 'svelte-mandelbrot-explorer'
-    let width = 150;
-    let height= 300;
+	import MandelbrotExplorer from '$lib';
+	let width = 150;
+    $: height = width / 16 * 9; //Preserve 16/9 aspect ratio
 </script>
 
-<div bind:clientWidth={width} bind:clientHeight={height} id="mandelbrot-explorer-wrapper">
-    <MandelbrotExplorer {width} {height}/>
+<div
+	bind:clientWidth={width}
+	style={`width: 100%; height: ${height}px;`}
+>
+	<MandelbrotExplorer {width} {height} />
 </div>
-
-<style>
-    #mandelbrot-explorer-wrapper {
-        width: 100%;
-        aspect-ratio: 16/9;
-    }
-</style>
 ```
 
 ## API Reference
@@ -47,16 +43,6 @@ The component defaults to a canvas size of 300x150. This is the default size of 
 
 
     Control the dimensions
-
-- **controls**
-
-
-    Type: enum("top-left" | "top-right" | "bottom-left" | "bottom-right" | "none")
-
-    Default: "bottom-left"
-
-
-    If and where the zoom-control widget should be shown
 
 - **frozen**
 
@@ -97,7 +83,7 @@ The component defaults to a canvas size of 300x150. This is the default size of 
     Type: number,
 
 
-    Default: 0.5,
+    Default: 0.3333333333,
 
 
     How zoomed in the viewport should be. The viewport-width in the complex plane is equal to `1/zoom`.
