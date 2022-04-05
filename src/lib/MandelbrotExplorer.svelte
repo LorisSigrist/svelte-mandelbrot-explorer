@@ -1,0 +1,1 @@
+<h1>Mandelbrot Explorer</h1>
