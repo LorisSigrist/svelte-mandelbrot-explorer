@@ -1,6 +1,6 @@
 # Svelte Mandelbrot Explorer
 
-TODO: Show Preview & link to demo
+![Mandelbrot Explorer preview image](/preview-image.png)
 
 ## Installation & Usage
 Install this component into your svelte or sveltekit application running `npm i svelte-mandelbrot-explorer`. You can then use it like this:
